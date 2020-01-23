@@ -23,6 +23,7 @@ console.log('f: ', typeof f);
 console.log('g: ', typeof g);
 console.log('h: ', typeof h);
 console.log('i: ', typeof i);
+console.log('j: ', typeof j);
 console.log('k: ', typeof k);
 console.log('l: ', typeof l);
 console.log('m: ', typeof m);
