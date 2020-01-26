@@ -1,7 +1,7 @@
 const n = 13;
-let res = '';
+let sum = '';
 
 for (let i = 1; i <= n; i++) {
-  res += String(i);
+  sum += String(i);
 }
-console.log(res);
+console.log(sum);
