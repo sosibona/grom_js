@@ -47,7 +47,7 @@ console.log('undefined && null && 0 && \'\' && null: ', undefined && null && 0 &
 console.log('!true: ', !true);
 console.log('!false: ', !false);
 console.log('!\'text\': ', !'text');
-console.log('!!\'text\' ', !!'text');
+console.log('!!\'text\': ', !!'text');
 // !true;
 // !false;
 // !'text';
