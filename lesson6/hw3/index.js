@@ -8,24 +8,24 @@ function searchMinElement(arr) {
 
 
 
-function sortAsc(arr) {
-  const sortAscArray = [];
-  const arrLength = arr.length;
-  for (let i = 0; i < arrLength; i++) {
-    sortAscArray.push(searchMaxElement(arr));
-    arr.splice(arr.indexOf(searchMaxElement(arr)), 1);
-  }
-  return sortAscArray;
-}
-
 function sortDesc(arr) {
   const sortDescArray = [];
   const arrLength = arr.length;
   for (let i = 0; i < arrLength; i++) {
-    sortDescArray.push(searchMinElement(arr));
-    arr.splice(arr.indexOf(searchMinElement(arr)), 1);
+    sortDescArray.push(searchMaxElement(arr));
+    arr.splice(arr.indexOf(searchMaxElement(arr)), 1);
   }
   return sortDescArray;
+}
+
+function sortAsc(arr) {
+  const sortAscArray = [];
+  const arrLength = arr.length;
+  for (let i = 0; i < arrLength; i++) {
+    sortAscArray.push(searchMinElement(arr));
+    arr.splice(arr.indexOf(searchMinElement(arr)), 1);
+  }
+  return sortAscArray;
 }
 
 
