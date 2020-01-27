@@ -10,4 +10,4 @@ function sum(from, to) {
   return sum;
 }
 
-console.log(compareSum(1, 6, 2, 4));
+// console.log(compareSum(1, 6, 2, 4));
