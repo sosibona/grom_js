@@ -4,6 +4,6 @@ function getMessagesForBestStudents(allStudents, noPassedStudents) {
   .map(name => 'Good job, ' + name);
 }
 
-const result = getMessagesBestStudents(['Ann', 'Bill', 'Duck'], ['Duck']);
+const result = getMessagesForBestStudents(['Ann', 'Bill', 'Duck'], ['Duck']);
 
 console.log(result);
