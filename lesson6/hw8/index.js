@@ -1,7 +1,9 @@
 function cloneArr(arr) {
-  const copyArray;
-  copyArray = [...arr];
+  const copyArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    copyArray.push(arr[i]);
+  }
   return copyArray;
 }
 
-// cloneArr([1,2]);
+console.log(cloneArr([1,2,3,4]));
