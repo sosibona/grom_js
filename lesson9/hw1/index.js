@@ -1,17 +1,24 @@
 const getCustomersList = listCustomers => {
-  let copyObj = Object.assign({}, listCustomers);
 
-  for (let key in copyObj) {
-    copyObj[key]['id'] = key;
+  const values = Object.values(listCustomers);
+  const keys = Object.keys(listCustomers);
+  const customersArray = [];
+
+  for (let i of values) {
+    customersArray.push(Object.assign({}, i));
   }
 
-  const customersArray = Object.values(copyObj);
+  for (let i = 0; i < values.length; i++) {
+    customersArray[i]['id'] = keys[i];
+  }
 
   customersArray.sort((a, b) => {
-    return a.age - b.age;
-  });
+      return a.age - b.age;
+    });
 
+  console.log(' i = ', customersArray);
   return customersArray;
+
 }
 
 const customers = {
