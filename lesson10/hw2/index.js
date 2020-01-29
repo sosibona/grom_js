@@ -4,7 +4,7 @@ function getRandomNumbers(length, start, end) {
   const res = [];
 
   while (res.length !== length) {
-    res.push(Math.floor(Math.random() * (start - end + 1)) + end);
+    res.push(Math.trunc(Math.random() * (start - end + 1)) + end);
   }
   return res;
 }
