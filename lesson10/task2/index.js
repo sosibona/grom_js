@@ -1,19 +1,19 @@
 const arr = [1.1, 2.2, 3.4, '  15.66t', 'test', null, NaN, Infinity, undefined];
 
 function getParsedIntegers(arr) {
-  return arr.filter(el => Number.parseInt(el));
+  return arr.map(el => Number.parseInt(el));
 }
 
 function getParsedIntegersV2(arr) {
-  return arr.filter(el => parseInt(el));
+  return arr.map(el => parseInt(el));
 }
 
 function getParsedFloats(arr) {
-  return arr.filter(el => Number.parseFloat(el));
+  return arr.map(el => Number.parseFloat(el));
 }
 
 function getParsedFloatsV2(arr) {
-  return arr.filter(el => parseFloat(el));
+  return arr.map(el => parseFloat(el));
 }
 
 
