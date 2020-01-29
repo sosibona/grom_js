@@ -16,7 +16,7 @@ function getNaNV2(arr) {
   return arr.filter(el => isNaN(el));
 }
 
-function getInteger(arr) {
+function getIntegers(arr) {
   return arr.filter(el => Number.isInteger(el));
 }
 
@@ -24,4 +24,4 @@ console.log(getFiniteNumbers(arr));
 console.log(getFiniteNumbersV2(arr));
 console.log(getNaN(arr));
 console.log(getNaNV2(arr));
-console.log(getInteger(arr));
+console.log(getIntegers(arr));
