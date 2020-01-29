@@ -7,7 +7,7 @@ function getRandomNumbers(length, start, end) {
 
   const res = [];
 
-  while (res.length !== 5) {
+  while (res.length !== length) {
     let randomNumber = Math.trunc(end * Math.random());
     if (randomNumber > start) res.push(randomNumber);
   }
@@ -15,4 +15,4 @@ function getRandomNumbers(length, start, end) {
   return res;
 }
 
-console.log(getRandomNumbers(5, 8, 10));
+console.log(getRandomNumbers(5, 8, 12));
