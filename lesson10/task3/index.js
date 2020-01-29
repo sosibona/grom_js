@@ -4,7 +4,7 @@ function multiRound(number) {
     Math.round(number * 100)/ 100,
     Math.ceil(number * 100)/ 100,
     Math.trunc(number * 100)/ 100,
-    number.toFixed(2)
+    +number.toFixed(2)
   ]
 }
 
