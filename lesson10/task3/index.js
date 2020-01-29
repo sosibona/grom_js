@@ -8,6 +8,4 @@ function multiRound(number) {
   ]
 }
 
-let number = Math.random() * 10;
-
-console.log(multiRound(number));
+console.log(multiRound(-19.456));
