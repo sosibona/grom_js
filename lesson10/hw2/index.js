@@ -1,7 +1,7 @@
 function getRandomNumbers(length, start, end) {
   if (end < start || length < 1 || end - start < 2) return null;
   if (end - start === 2) {
-    const res = new Array(2);
+    const res = new Array(length);
     return res.fill((end + start) / 2);
   }
 
