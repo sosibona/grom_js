@@ -1,4 +1,4 @@
-const getAdulst = obj => {
+const getAdults = obj => {
 	const arr = Object.entries(obj);
 	return arr
 				.filter(item => item[1] >= 18)
@@ -11,5 +11,5 @@ const users = {
 	'Bob': 18,
 }
 
-console.log(getAdulst(users));
+console.log(getAdults(users));
 
