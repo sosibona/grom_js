@@ -1,7 +1,7 @@
 function splitString(str, number = 10) {
 
-  
 
+  
   const arrStr = [];
   let startPosition = 0;
 
