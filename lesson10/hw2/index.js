@@ -5,7 +5,7 @@ function getRandomNumbers(length, start, end) {
 
   while (res.length !== length) {
     let a = (Math.random() * (start - end + 1)) + end;
-    res.push(Math.trunc(a));
+    res.push(Math.floor(a));
   }
   return res;
 }
