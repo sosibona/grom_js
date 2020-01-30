@@ -11,6 +11,4 @@ function splitText(str, number) {
   return arr.join('\n');
 }
 
-let str = 'I will be front end developer';
-
-console.log(splitText(str, 4));
+console.log(splitText('I will be front end developer', 4));
