@@ -1,5 +1,5 @@
 function getRandomNumbers(length, start, end) {
-  if (end < start || length < 1 || end - start === 1) return null;
+  if (end < start || length < 1 || end - start === 1 || Math.ceil(start) === Math.ceil(end)) return null;
 
   const res = [];
 
