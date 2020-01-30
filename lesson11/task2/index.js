@@ -29,7 +29,7 @@ contactList = [
   {
     name: 'Bob',
     phoneNumber: '1'
-  },
+  }
 ];
 
 console.log(sortContacts(contactList));
