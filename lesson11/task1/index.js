@@ -1,4 +1,6 @@
-function splitText(str, number) {
+function splitText(str, number = 10) {
+  if (typeof str !== 'string') return null;
+  
   const arr = [];
   let startPosition = 0;
 
@@ -11,4 +13,4 @@ function splitText(str, number) {
   return arr.join('\n');
 }
 
-console.log(splitText('I will be front end developer', 4));
+console.log(splitText('asdasdasdasdasda', 4));
