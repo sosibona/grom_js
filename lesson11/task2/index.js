@@ -13,7 +13,7 @@ function sortContacts(contacts, sorting = true) {
 
 }
 
-contactList = [
+const contactList = [
   {
     name: 'Taras',
     phoneNumber: '1'
