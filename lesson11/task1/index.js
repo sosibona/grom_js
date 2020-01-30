@@ -7,9 +7,7 @@ function splitText(str, number) {
     if (piece.length === 0) break;
     arr.push(piece[0].toUpperCase() + piece.slice(1));
     startPosition += number;
-    console.log(startPosition);
   }
-
   return arr.join('\n');
 }
 
