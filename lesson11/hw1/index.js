@@ -1,4 +1,7 @@
-function splitString(str, number) {
+function splitString(str, number = 10) {
+
+  
+
   const arrStr = [];
   let startPosition = 0;
 
@@ -11,7 +14,7 @@ function splitString(str, number) {
     startPosition += number;
     arrStr.push(piece);
   }
-  
+
   let lastElement = arrStr[arrStr.length - 1];
 
   lastElement += '.'.repeat(number - lastElement.length);
