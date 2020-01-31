@@ -1,6 +1,3 @@
-'use strict'
-
-
 export default createMessenger = () => {
   let message = 'Just learn it';
   let sender = 'Gromcode';
