@@ -1,7 +1,7 @@
 'use strict'
 
 let message = 'Just learn it';
-// let sender = 'Gromcode';
+let sender = 'Gromcode';
 
 const createMessenger = () => {
   function sendMessage(name) {
@@ -14,14 +14,14 @@ const createMessenger = () => {
     message = text;
   }
 
-  // function setSender(nameSender) {
-  //   sender  = nameSender;
-  // }
+  function setSender(nameSender) {
+    sender  = nameSender;
+  }
 
   return {
     sendMessage,
     setMessage,
-    // setSender,
+    setSender,
   };
 };
 
