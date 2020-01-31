@@ -2,7 +2,7 @@
 
 let message = 'Just learn it';
 
-function createMessanger() {
+const createMessanger = () => {
   function sentMessage(name) {
     const sender = 'Gromcode';
 
