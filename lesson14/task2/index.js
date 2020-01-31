@@ -1,11 +1,11 @@
 'use strict'
 
 let message = 'Just learn it';
-let sender = 'Gromcode';
+// let sender = 'Gromcode';
 
-export const createMessenger = () => {
+const createMessenger = () => {
   function sendMessage(name) {
-    // const sender = 'Gromcode';
+    const sender = 'Gromcode';
 
     console.log(`${name}, ${message}! Your ${sender}`);
   }
@@ -14,18 +14,18 @@ export const createMessenger = () => {
     message = text;
   }
 
-  function setSender(nameSender) {
-    sender  = nameSender;
-  }
+  // function setSender(nameSender) {
+  //   sender  = nameSender;
+  // }
 
   return {
     sendMessage,
     setMessage,
-    setSender,
+    // setSender,
   };
 };
 
-console.log(createMessenger());
+// console.log(createMessenger());
 
 // const mes1 = createMessanger();
 // const mes2 = createMessanger();
