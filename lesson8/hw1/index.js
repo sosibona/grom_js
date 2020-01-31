@@ -1,4 +1,4 @@
-const pickProps = (obj, arr) => {
+export const pickProps = (obj, arr) => {
   const newObj = {};
   for (let props in obj) {
     if (arr.includes(props)) newObj[props] = obj[props];
