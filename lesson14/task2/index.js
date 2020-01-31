@@ -21,7 +21,7 @@ export default createMessenger = () => {
     setMessage,
     setSender,
   };
-};
+}
 
 
 // const mes1 = createMessenger();
