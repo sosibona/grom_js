@@ -3,7 +3,7 @@
 let message = 'Just learn it';
 let sender = 'Gromcode';
 
-const createMessenger = () => {
+export const createMessenger = () => {
   function sendMessage(name) {
     // const sender = 'Gromcode';
 
@@ -24,6 +24,8 @@ const createMessenger = () => {
     setSender,
   };
 };
+
+console.log(createMessenger());
 
 // const mes1 = createMessanger();
 // const mes2 = createMessanger();
