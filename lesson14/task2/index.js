@@ -1,7 +1,7 @@
 'use strict'
 
 
-const createMessenger = () => {
+export default createMessenger = () => {
   let message = 'Just learn it';
   let sender = 'Gromcode';
 
