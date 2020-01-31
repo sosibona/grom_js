@@ -1,4 +1,4 @@
-const getAdults = obj => {
+export const getAdults = obj => {
   const resObj = {};
   for (let key in obj) {
     if (obj[key] >= 18) resObj[key] = obj[key];
