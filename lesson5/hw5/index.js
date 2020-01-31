@@ -1,4 +1,4 @@
-function findDivCount (a, b, n) {
+export function findDivCount (a, b, n) {
   let count = 0;
   for (let i = a; i <= b; i++) {
     if (i % n === 0) count++;
@@ -6,4 +6,4 @@ function findDivCount (a, b, n) {
   return count;
 }
 
-console.log(findDivCount(1, 100, 2));
+console.log(findDivCount(-100, -1, 2));
