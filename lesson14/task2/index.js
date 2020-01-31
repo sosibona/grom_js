@@ -1,9 +1,10 @@
 'use strict'
 
-let message = 'Just learn it';
-let sender = 'Gromcode';
 
 const createMessenger = () => {
+  let message = 'Just learn it';
+  let sender = 'Gromcode';
+
   function sendMessage(name) {
     // const sender = 'Gromcode';
 
@@ -25,15 +26,18 @@ const createMessenger = () => {
   };
 };
 
-// console.log(createMessenger());
 
-// const mes1 = createMessanger();
-// const mes2 = createMessanger();
+// const mes1 = createMessenger();
+// const mes2 = createMessenger();
 
-// mes1.sentMessage('Taras');
-// // mes2.sentMessage('Olesya');
+// mes1.sendMessage('Taras');
+// mes2.sendMessage('Olesya');
+
 // mes1.setMessage('Good job');
-// // mes2.setMessage('Good job');
+// mes2.setMessage('Good job');
+
 // mes1.setSender('JS');
-// mes1.sentMessage('Taras');
-// // mes2.sentMessage('Olesya');
+// mes2.setSender('html');
+
+// mes1.sendMessage('Taras');
+// mes2.sendMessage('Olesya');
