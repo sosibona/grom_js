@@ -1,4 +1,4 @@
-function reverseArray(array) {
+export function reverseArray(array) {
   if (!Array.isArray(array)) return null;
   const copyArray = array.slice();
   return copyArray.reverse();
