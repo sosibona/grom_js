@@ -19,8 +19,8 @@ export default createMessenger = () => {
   return {
     sendMessage,
     setMessage,
-    setSender,
-  };
+    setSender
+  }
 }
 
 
