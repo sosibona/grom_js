@@ -1,6 +1,6 @@
 
 
-function createLogger() {
+export function createLogger() {
    let logger = [];
 
   function warn(warning) {
