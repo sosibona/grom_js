@@ -2,7 +2,7 @@ export const user = {
   firstName: 'Taras',
   lastName: 'Baraniak',
   getFullName() {
-    console.log(`${this.firstName} ${this.lastName}`);
+    return (`${this.firstName} ${this.lastName}`);
   }
 }
 
