@@ -1,7 +1,7 @@
-function createArrayOfFunction(sizeOfArray) {
+function createArrayOfFunctions(sizeOfArray = []) {
 
   if (typeof sizeOfArray === "number") return null;
-  if (sizeOfArray === undefined) return [];
+  // if (sizeOfArray === undefined) return [];
 
   let arr = [];
 
@@ -13,4 +13,4 @@ function createArrayOfFunction(sizeOfArray) {
   return arr;
 }
 
-console.log(createArrayOfFunction()[2]());
+// console.log(createArrayOfFunctions());
