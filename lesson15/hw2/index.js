@@ -1,14 +1,16 @@
 
 
-export function createLogger() {
+function createLogger() {
    let logger = [];
 
   function warn(warning) {
-      const warn = {}
-      warn.message = warning;
-      warn.dataTime = new Date();
-      warn.type = 'warn';
-      logger.push(warn);
+
+    logger.push({message: warning, dataTime: new Date(), type: 'warn'})
+    // const warningObj = {};     
+    // warningObj.message = warning;
+    // warningObj.dataTime = new Date();
+    // warningObj.type = 'warn';
+    // logger.push(warningObj);
       // return logger;
   }
 
