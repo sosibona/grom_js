@@ -1,6 +1,6 @@
-function createArrayOfFunctions(sizeOfArray = []) {
+export function createArrayOfFunctions(sizeOfArray = []) {
 
-  if (typeof sizeOfArray === "number") return null;
+  if (typeof sizeOfArray !== "number") return null;
   // if (sizeOfArray === undefined) return [];
 
   let arr = [];
