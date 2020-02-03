@@ -58,17 +58,17 @@ function getRecords(typeOfMeassage){
   }
 }
 
-const warning1 = createLogger();
-const warning2 = createLogger();
+// const warning1 = createLogger();
+// const warning2 = createLogger();
 
 // console.log(warning1);
-warning1.warn('bbbbbbbbb');
-warning2.warn('cccc');
-warning1.warn('dddd');
-warning1.log('test');
+// warning1.warn('bbbbbbbbb');
+// setTimeout(warning2.warn('cccc'), 2000);
+// warning1.warn('dddd');
+// warning1.log('test');
+// // warning1.getRecords();
+// warning1.getRecords('warn');
 // warning1.getRecords();
-warning1.getRecords('warn');
-warning1.getRecords();
-warning1.getRecords('error');
-// console.log(warning1.error('ffff'));
-// console.log(warning1.logger);
+// warning1.getRecords('error');
+// // console.log(warning1.error('ffff'));
+// // console.log(warning1.logger);
