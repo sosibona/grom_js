@@ -5,7 +5,7 @@ export function createLogger() {
 
   function warn(warning) {
 
-    logger.push({message: warning, dataTime: new Date(), type: 'warn'})
+    logger.push({message: warning, dateTime: new Date(), type: 'warn'})
     // const warningObj = {};     
     // warningObj.message = warning;
     // warningObj.dataTime = new Date();
@@ -17,7 +17,7 @@ export function createLogger() {
   function error(messageError) {
     const error = {};
     error.message = messageError;
-    error.dataTime = new Date();
+    error.dateTime = new Date();
     error.type = 'error';
     logger.push(error);
 }
@@ -25,7 +25,7 @@ export function createLogger() {
   function log(message) {
     const log = {};
     log.message = message;
-    log.dataTime = new Date();
+    log.dateTime = new Date();
     log.type = 'log';
     logger.push(log);
   }
