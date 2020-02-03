@@ -1,9 +1,9 @@
 export function createArrayOfFunctions(sizeOfArray) {
-
-  if (typeof sizeOfArray !== "number") return null;
-  if (sizeOfArray === undefined) return [];
-
+  
   let arr = [];
+  if (typeof sizeOfArray !== "number") return null;
+  if (sizeOfArray === undefined) return arr;
+
 
   for (let i = 0; i < sizeOfArray; i++){
     arr.push(function(){
