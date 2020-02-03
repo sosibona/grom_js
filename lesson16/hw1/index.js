@@ -1,8 +1,8 @@
 export function createArrayOfFunctions(sizeOfArray) {
   
-  let arr = [];
-  if (typeof sizeOfArray !== "number") return null;
+  var arr = [];
   if (sizeOfArray === undefined) return arr;
+  if (typeof sizeOfArray !== "number") return null;
 
 
   for (let i = 0; i < sizeOfArray; i++){
