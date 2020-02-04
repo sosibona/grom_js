@@ -1,9 +1,12 @@
+let intervalID;
+
 export const timer = {
   secondsPassed: 0,
   minsPassed: 0,
   startTimer(){
-    let timerID = setInterval(() => {
+    intervalID = setInterval(() => {
       this.secondsPassed += 5;
+        console.log(`${this.minsPassed}:${this.secondsPassed}`);
       if (this.secondsPassed === 60) {
         this.minsPassed++;
         this.secondsPassed = 0;
@@ -14,7 +17,7 @@ export const timer = {
       //   console.log(`${this.minsPassed}:${this.secondPassed}`);
       // }
       
-    }, 5000);
+    }, 1000);
   },
   getTime(){
     if (this.secondsPassed < 10) {
@@ -25,20 +28,18 @@ export const timer = {
     return `${this.minsPassed}:${this.secondsPassed}`;
   },
   stopTimer(){
-    clearInterval(this.timerID);
+    clearInterval(intervalID);
   },
   resetTimer() {
     this.secondsPassed = 0;
     this.minsPassed = 0;
   }
 }
-
 // timer.startTimer();
-
-
-// // 
 // console.log(timer.getTime());
 // timer.stopTimer();
+// timer.startTimer();
+
 
 // console.log(timer.getTime());
 
