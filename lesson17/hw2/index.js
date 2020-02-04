@@ -11,13 +11,7 @@ export const timer = {
         this.minsPassed++;
         this.secondsPassed = 0;
       }
-      //   console.log(`${this.minsPassed}:${this.secondPassed}`);
-      // } else {
-        
-      //   console.log(`${this.minsPassed}:${this.secondPassed}`);
-      // }
-      
-    }, 1000);
+    }, 5000);
   },
   getTime(){
     if (this.secondsPassed < 10) {
