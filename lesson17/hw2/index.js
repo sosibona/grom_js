@@ -1,5 +1,5 @@
 export const timer = {
-  secondPassed: 0,
+  secondsPassed: 0,
   minsPassed: 0,
   startTimer(){
     setInterval(() => {
