@@ -3,14 +3,16 @@ export const timer = {
   minsPassed: 0,
   startTimer(){
     setInterval(() => {
-      if (this.secondPassed === 55) {
+      this.secondPassed += 5;
+      if (this.secondPassed === 60) {
         this.minsPassed++;
         this.secondPassed = 0;
-        console.log(`${this.minsPassed}:${this.secondPassed}`);
-      } else {
-        this.secondPassed += 5;
-        console.log(`${this.minsPassed}:${this.secondPassed}`);
       }
+      //   console.log(`${this.minsPassed}:${this.secondPassed}`);
+      // } else {
+        
+      //   console.log(`${this.minsPassed}:${this.secondPassed}`);
+      // }
       
     }, 5000);
   },
