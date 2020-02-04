@@ -3,10 +3,10 @@ export const timer = {
   minsPassed: 0,
   startTimer(){
     setInterval(() => {
-      this.secondPassed += 5;
-      if (this.secondPassed === 60) {
+      this.secondsPassed += 5;
+      if (this.secondsPassed === 60) {
         this.minsPassed++;
-        this.secondPassed = 0;
+        this.secondsPassed = 0;
       }
       //   console.log(`${this.minsPassed}:${this.secondPassed}`);
       // } else {
@@ -17,18 +17,18 @@ export const timer = {
     }, 5000);
   },
   getTime(){
-    if (this.secondPassed < 10) {
-      const convertSecond = String(this.secondPassed).padStart(2, '0');
+    if (this.secondsPassed < 10) {
+      const convertSecond = String(this.secondsPassed).padStart(2, '0');
       return `${this.minsPassed}:${convertSecond}`;
     }
 
-    return `${this.minsPassed}:${this.secondPassed}`;
+    return `${this.minsPassed}:${this.secondsPassed}`;
   },
   stopTimer(){
     clearInterval();
   },
   resetTimer() {
-    this.secondPassed = 0;
+    this.secondsPassed = 0;
     this.minsPassed = 0;
   }
 }
