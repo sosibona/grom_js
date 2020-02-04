@@ -2,7 +2,7 @@ export const timer = {
   secondsPassed: 0,
   minsPassed: 0,
   startTimer(){
-    setInterval(() => {
+    let timerID = setInterval(() => {
       this.secondsPassed += 5;
       if (this.secondsPassed === 60) {
         this.minsPassed++;
@@ -25,7 +25,7 @@ export const timer = {
     return `${this.minsPassed}:${this.secondsPassed}`;
   },
   stopTimer(){
-    clearInterval();
+    clearInterval(this.timerID);
   },
   resetTimer() {
     this.secondsPassed = 0;
@@ -33,10 +33,12 @@ export const timer = {
   }
 }
 
+// timer.startTimer();
 
 
-// 
+// // 
 // console.log(timer.getTime());
+// timer.stopTimer();
 
 // console.log(timer.getTime());
 
