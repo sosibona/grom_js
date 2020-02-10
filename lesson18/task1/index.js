@@ -6,7 +6,7 @@ export const event = {
     {name: "Bob", age: 10, email: "bob@gmail.com"}
   ],
   getInvintations(){
-    return this.guests.filter(({age}) => age >= 18).map(({email, name}) => ({
+    return this.guests.filter(({age}) => age > 18).map(({email, name}) => ({
       text: `Dear ${name}! ${this.message}`,
       email
     }));
