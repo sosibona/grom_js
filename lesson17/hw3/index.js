@@ -1,4 +1,4 @@
-export function bind(func, context, [arg1]){
+export function bind(func, context, ...arg1){
 
 	return function(...args) {
 		return func.apply(
