@@ -5,12 +5,12 @@ export const event = {
     {name: "Mat", age: 18, email: "mat@gmail.com"},
     {name: "Bob", age: 10, email: "bob@gmail.com"}
   ],
-  getInvintations(){
-    return this.guests.filter(({age}) => age > 18).map(({name, email}) => ({
+  getInvitations(){
+    return this.guests.filter(({age}) => age >= 18).map(({name, email}) => ({
       text: `Dear ${name}! ${this.message}!`,
       email
     }));
   }
 }
 
-console.log(event.getInvintations());
+console.log(event.getInvitations());
