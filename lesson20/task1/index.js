@@ -4,6 +4,10 @@ export class User {
     this.age = age;
   }
 
+  static createEmpty(){
+    
+  }
+
   sayHi() {
     console.log(`Hi, I am ${this.name}`);
   }
@@ -17,6 +21,6 @@ export class User {
 
     this.age = newAge;
     if (age >= 25) this.requestNewPhoto();
-    return this.age;
+    return newAge;
   }
 }
