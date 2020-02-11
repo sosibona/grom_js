@@ -5,7 +5,8 @@ export class User {
   }
 
   static createEmpty(){
-
+    const user = new User('', null);
+    return user;
   }
 
   sayHi() {
@@ -24,3 +25,7 @@ export class User {
     return newAge;
   }
 }
+
+const user1 = new User('Taras', 32);
+console.log(user1);
+console.log(User.createEmpty());
