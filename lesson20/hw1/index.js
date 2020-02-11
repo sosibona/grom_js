@@ -13,9 +13,10 @@ export class Order {
   }
 
   confirmOrder(){
-    if (this.isConfirmed) return;
+    if (this.isConfirmed) {
     this.isConfirmed = true;
     this.dateCreated = new Date();
+    }
   }
 
   isValidType(){
