@@ -11,13 +11,13 @@
     name: 'Argo',
     startMachine(){
       console.log(`${this.name} lifting anchor up`);
-    },
-    stop(){
-      console.log(`${this.name} lifting anchor down`);
+      return this.move();
     },
     stopMachine(){
       return this.stop();
+      console.log(`${this.name} lifting anchor down`);
     },
+    __proto__: vehicle,
   }
 
   // ship.startMachine();
