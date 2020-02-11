@@ -6,7 +6,7 @@ export default user = {
   },
   set fullName(name) {
     const [firstName, lastName] = name.split(' ');
-    this.name = firstName;
+    this.firstName = firstName;
     this.lastName = lastName;
   }
 }
