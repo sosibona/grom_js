@@ -12,7 +12,7 @@ User.prototype.requestNewPhoto = function(){
 }
 
 User.prototype.setAge = function(age){
-  if (age < 0) return fasle;
+  if (age <= 0) return fasle;
 
   this.age = age;
   if (age >= 25) this.requestNewPhoto();
