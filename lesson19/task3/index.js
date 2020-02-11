@@ -4,7 +4,7 @@ export default {
   get fullName(){
     return `${this.firstName} ${this.lastName}`;
   },
-  setFullName(name) {
+  set fullName(name) {
     const [firstName, lastName] = name.split(' ');
     this.firstName = firstName;
     this.lastName = lastName;
