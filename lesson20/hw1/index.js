@@ -1,4 +1,4 @@
-class Order {
+export class Order {
   constructor(price, city, type){
     this.price = price;
     this.city = city;
