@@ -11,10 +11,10 @@
     name: 'Argo',
     startMachine(){
       console.log(`${this.name} lifting anchor up`);
-      return this.move();
+      this.move();
     },
     stopMachine(){
-      return this.stop();
+      this.stop();
       console.log(`${this.name} lifting anchor down`);
     },
     __proto__: vehicle,
