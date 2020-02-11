@@ -16,7 +16,6 @@ export class Order {
     if (this.isConfirmed) return;
     this.isConfirmed = true;
     this.dateCreated = new Date();
-    return;
   }
 
   isValidType(){
@@ -26,4 +25,6 @@ export class Order {
 }
 
 const order1 = new Order(1000, 'Lviv', 'Sell');
+console.log(order1);
+order1.confirmOrder();
 console.log(order1);
