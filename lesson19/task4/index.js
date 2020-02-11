@@ -12,16 +12,16 @@ User.prototype.requestNewPhoto = function(){
 }
 
 User.prototype.setAge = function(age){
-  if (age <= 0) return fasle;
+  if (age <= 0) return false;
 
   this.age = age;
   if (age >= 25) this.requestNewPhoto();
   return age;
 }
 
-// const user1 = new User('Taras', 32);
-// console.log(user1);
-// user1.sayHi();
-// user1.requestNewPhoto();
-// user1.setAge(33);
-// console.log(user1.age);
+const user1 = new User('Taras', 32);
+console.log(user1);
+user1.sayHi();
+user1.requestNewPhoto();
+user1.setAge(-2);
+console.log(user1.age);
