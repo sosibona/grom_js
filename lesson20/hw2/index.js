@@ -10,12 +10,12 @@ export class User {
   }
 
   get name(){
-    return this.name;
+    return this._name;
   }
 
 
   get sessionId(){
-    return this.sessionId;
+    return this._sessionId;
   }
 }
 
