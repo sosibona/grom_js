@@ -29,16 +29,24 @@ export class UserRepository{
   }
 
   getUserNames(){
-    return this.users.map(el => el._name);
+    return this.users.map(el => el.name);
   }
 
   getUserIds(){
-    return this.users.map(el => el._id);
+    return this.users.map(el => el.id);
   }
 
   getUserNamesById(id){
-    return this._users.filter(el => el.id === id.toString()).map(el => el.name)[0];
-    // for (let user of this._)
+    // return this._users.filter(el => el.id === id.toString()).map(el => el.name)[0];
+    for (let user of this._users) {
+      // console.log(user);
+      if (user['id'] === id) {
+        // console.log(user.name);
+        
+        return user.name;
+        
+      }
+    }
   }
 
 
@@ -50,7 +58,7 @@ export class UserRepository{
 // // console.log(user1);
 
 const list = new UserRepository([
-  {_id: '1', _name: 'Taras', _sessionId: '1'},
+  {id: '1', name: 'Taras', sessionId: '1'},
   {id: '2', name: 'Olesya', sessionId: '2'},
   {id: '3', name: 'Ivan', sessionId: '3'}
 ]);
@@ -58,7 +66,7 @@ const list = new UserRepository([
 console.log(list);
 console.log(list.getUserNames());
 console.log(list.getUserIds()); 
-console.log(list.getUserNamesById(2)); 
+console.log(list.getUserNamesById('2')); 
 
 
 // // const user2 = new User('dasda', 'taras', 'dasdas');
