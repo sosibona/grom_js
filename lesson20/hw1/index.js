@@ -13,7 +13,9 @@ export class Order {
   }
 
   confirmOrder(){
-    this.isConfirmed = true;
+    if (!this.isConfirmed) {
+      this.isConfirmed = true;
+    }
     this.dateCreated = new Date();
   }
 
