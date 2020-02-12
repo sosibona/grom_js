@@ -9,27 +9,14 @@ export class User {
     return this._id;
   }
 
-  // set id(value){
-  //   this.id = value;
-  // }
-
   get name(){
     return this.name;
   }
 
-  // set name(value){
-  //   this.name = value;
-  // }
 
   get sessionId(){
     return this.sessionId;
   }
-
-  // set sessionId(value){
-  //   this.sessionId = value;
-  // }
- 
-
 }
 
 export class UserRepository{
@@ -42,15 +29,15 @@ export class UserRepository{
   }
 
   getUserNames(){
-    return this.users.map(el => el.name);
+    return this.users.map(el => el._name);
   }
 
   getUserIds(){
-    return this.users.map(el => el.id);
+    return this.users.map(el => el._id);
   }
 
   getUserNamesById(id){
-    return this.users.filter(el => el.id === id.toString()).map(el => el.name);
+    return this.users.filter(el => el._id === id.toString()).map(el => el._name);
   }
 
 
