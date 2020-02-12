@@ -5,6 +5,7 @@ export class Order {
     this.type = type;
     this.dateCreated = new Date();
     this.isConfirmed = false;
+    this.dateConfirmed = null;
     this.id = Math.random().toString(36).substring(7);
   }
 
@@ -15,8 +16,8 @@ export class Order {
   confirmOrder(){
     if (!this.isConfirmed) {
       this.isConfirmed = true;
+      this.dateConfirmed = new Date();
     }
-    this.dateCreated = new Date();
   }
 
   isValidType(){
