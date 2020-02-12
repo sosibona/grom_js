@@ -36,15 +36,13 @@ export class UserRepository{
     return this.users.map(el => el.id);
   }
 
-  getUserNamesById(id){
+  getUserNameById(id){
     // return this._users.filter(el => el.id === id.toString()).map(el => el.name)[0];
     for (let user of this._users) {
       // console.log(user);
       if (user['id'] === id) {
         // console.log(user.name);
-        
         return user.name;
-        
       }
     }
   }
