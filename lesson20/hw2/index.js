@@ -5,6 +5,19 @@ export class User {
     this.sessionId = sessionId;
   }
 
+  get id(){
+    return this.id;
+  }
+
+  get name(){
+    return this.name;
+  }
+
+  get sessionId(){
+    return this.sessionId;
+  }
+ 
+
 }
 
 export class UserRepository{
@@ -27,18 +40,18 @@ export class UserRepository{
 
 }
 
-const user1 = new User('adsa', 'dsadas', 'fsdfsd');
-// console.log(listOfUsers);
-const list = new UserRepository([
-  {id: '1', name: 'Taras', sessionId: '1'},
-  {id: '2', name: 'Olesya', sessionId: '2'},
-  {id: '3', name: 'Ivan', sessionId: '3'}
-]);
+// const user1 = new User('adsa', 'dsadas', 'fsdfsd');
+// console.log(user1);
+// const list = new UserRepository([
+//   {id: '1', name: 'Taras', sessionId: '1'},
+//   {id: '2', name: 'Olesya', sessionId: '2'},
+//   {id: '3', name: 'Ivan', sessionId: '3'}
+// ]);
 
-console.log(list);
-console.log(list.getUserNames());
-console.log(list.getUserIds()); 
-console.log(list.getUserNamesById(2)); 
+// console.log(list);
+// console.log(list.getUserNames());
+// console.log(list.getUserIds()); 
+// console.log(list.getUserNamesById(2)); 
 
 
 // const user2 = new User('dasda', 'taras', 'dasdas');
