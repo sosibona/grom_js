@@ -34,7 +34,11 @@ export class User {
 
 export class UserRepository{
   constructor(users) {
-    this.users = users;
+    this._users = users;
+  }
+
+  get users(){
+    return this._users;
   }
 
   getUserNames(){
@@ -57,16 +61,16 @@ console.log(user1);
 // console.log(user1.id = '2222');
 // console.log(user1);
 
-// // const list = new UserRepository([
-// //   {id: '1', name: 'Taras', sessionId: '1'},
-// //   {id: '2', name: 'Olesya', sessionId: '2'},
-// //   {id: '3', name: 'Ivan', sessionId: '3'}
-// // ]);
+const list = new UserRepository([
+  {id: '1', name: 'Taras', sessionId: '1'},
+  {id: '2', name: 'Olesya', sessionId: '2'},
+  {id: '3', name: 'Ivan', sessionId: '3'}
+]);
 
-// // console.log(list);
-// // console.log(list.getUserNames());
-// // console.log(list.getUserIds()); 
-// // console.log(list.getUserNamesById(2)); 
+console.log(list);
+console.log(list.getUserNames());
+console.log(list.getUserIds()); 
+console.log(list.getUserNamesById(2)); 
 
 
 // // const user2 = new User('dasda', 'taras', 'dasdas');
