@@ -37,7 +37,8 @@ export class UserRepository{
   }
 
   getUserNamesById(id){
-    return this.users.filter(el => el.id === id.toString()).map(el => el.name)[0];
+    return this._users.filter(el => el.id === id.toString()).map(el => el.name)[0];
+    // for (let user of this._)
   }
 
 
