@@ -37,7 +37,7 @@ export class UserRepository{
   }
 
   getUserNamesById(id){
-    return this.users.filter(el => el._id === id.toString()).map(el => el._name);
+    return this.users.filter(el => el.id === id.toString()).map(el => el.name)[0];
   }
 
 
@@ -48,16 +48,16 @@ export class UserRepository{
 // // console.log(user1.id = '2222');
 // // console.log(user1);
 
-// const list = new UserRepository([
-//   {id: '1', name: 'Taras', sessionId: '1'},
-//   {id: '2', name: 'Olesya', sessionId: '2'},
-//   {id: '3', name: 'Ivan', sessionId: '3'}
-// ]);
+const list = new UserRepository([
+  {_id: '1', _name: 'Taras', _sessionId: '1'},
+  {id: '2', name: 'Olesya', sessionId: '2'},
+  {id: '3', name: 'Ivan', sessionId: '3'}
+]);
 
-// console.log(list);
-// console.log(list.getUserNames());
-// console.log(list.getUserIds()); 
-// console.log(list.getUserNamesById(2)); 
+console.log(list);
+console.log(list.getUserNames());
+console.log(list.getUserIds()); 
+console.log(list.getUserNamesById(2)); 
 
 
 // // const user2 = new User('dasda', 'taras', 'dasdas');
