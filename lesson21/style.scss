@@ -6,7 +6,6 @@
 
 body {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -19,7 +18,6 @@ body {
 .todo-list{
   width: 600px;
   background-color: coral;
-  margin-top: 32px;
   padding: 8px;
 }
 
@@ -31,15 +29,15 @@ body {
   font-weight: bold;
 }
 
+.todo-task {
+  display: flex;
+}
+
 .task-input{
   height: 32px;
   margin-right: 16px;
   width: 100%;
   border: 3px solid #ccc;
-}
-
-.todo-task {
-  display: flex;
 }
 
 .list{
