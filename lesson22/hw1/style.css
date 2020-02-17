@@ -64,4 +64,9 @@ body {
   margin-right: 8px;
 }
 
+.todo-pen {
+  margin-left: auto;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */

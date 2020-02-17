@@ -1,17 +1,17 @@
 const btnCreateTask = document.querySelector('.todo__button');
 
 const task = [
-    { text: 'Buy milk', dateCreate: new Date(), done: false },
-    { text: 'Pick up Tom from airport', dateCreate: new Date(), done: false },
-    { text: 'Visit party', dateCreate: new Date(), done: false },
-    { text: 'Visit doctor', dateCreate: new Date(), done: true },
-    { text: 'Buy meat', dateCreate: new Date(), done: true },
+    { text: 'Buy milk', dateCreate: new Date(2019, 1), done: false },
+    { text: 'Pick up Tom from airport', dateCreate: new Date(2018, 1), done: false },
+    { text: 'Visit party', dateCreate: new Date(2020, 1), done: false },
+    { text: 'Visit doctor', dateCreate: new Date(2020, 5), done: false },
+    { text: 'Buy meat', dateCreate: new Date(2019, 7), done: false },
   ];    
-
+// create new task
 function createNewTask(){
     let getText = document.querySelector('.task-input').value;
     if (getText.length === 0) return;
-    task.push({
+    task.unshift({
         text: getText,
         dateCreate: new Date(),
         done: false,
@@ -23,27 +23,25 @@ function createNewTask(){
 }
 
   btnCreateTask.addEventListener('click', createNewTask);
-
-
-
+// make in html page list of Task
   const renderListItems = listItems => {
-    const  listElem = document.querySelector('.list');
+    const listElem = document.querySelector('.list');
   
-    const listTasks = listItems.sort((a, b) => a.done - b.done)
+    const listTasks = listItems.sort((a, b) => b.dateCreate - a.dateCreate).sort((a, b) => a.done - b.done)
       .map(({ text, done }) => {
       const listItemElem = document.createElement('li');
-      const checkboxElem = document.createElement('input')
+      const checkboxElem = document.createElement('input');
+
       checkboxElem.classList.add('list__checkbox');
-      checkboxElem.setAttribute('type', 'checkbox');
       listItemElem.classList.add('list__item'); 
+
+      checkboxElem.setAttribute('type', 'checkbox');
       if (done) listItemElem.classList.add('list__item_checked');
         checkboxElem.checked = done;
       listItemElem.append(checkboxElem, text);
       return listItemElem;
     });
 
-    console.log(listTasks);
-    
     listElem.append(...listTasks);
   
     return listTasks;
@@ -51,18 +49,51 @@ function createNewTask(){
   
   renderListItems(task);
 
+// make a done task
 
-//   const checkboxElem = document.querySelector('.list__checkbox');
+  const checkboxAllElem = document.querySelectorAll('.list');
+  const listElem = document.querySelector('.list');
+  console.log(checkboxAllElem);
 
-//   checkboxElem.addEventListener('click', doneTask);
+  for(var i = 0; i < checkboxAllElem.length; i++) {
+      
+    checkboxAllElem[i].addEventListener('click', function(){
+        if (event.target.tagName !== 'INPUT') return;
+        const checkboxItem = event.target.parentNode;
+        console.log(checkboxItem.textContent);
+        if (checkboxItem.classList.contains('list__item_checked')) {
+            checkboxItem.classList.remove('list__item_checked');
+            isDoneTask(task, checkboxItem);
+            const newTask = refreshTask(task);
+            listElem.innerHTML = '';
+            renderListItems(newTask); 
+        } else {
+            checkboxItem.classList.add('list__item_checked');
+            isDoneTask(task, checkboxItem);
+            const newTask = refreshTask(task);
+            listElem.innerHTML = '';
+            renderListItems(newTask); 
+        }
+    });
+}
+//check on done task
+function isDoneTask(listTask, checkboxItem){
+    listTask.forEach(elem => {
+        if (elem.text === checkboxItem.textContent) {
+            elem.done = !elem.done;
+        }
+    });
+}
 
-//   function doneTask(){
-//       const listItemElem = document.querySelector('.list__item');
+//refresh our task by sort done and not done by time 
 
-//       listItemElem.classList.toggle('list__item_checked')
-
-//       checkboxElem.setAttribute.toggle('checked', 'checked');
-//   }
+function refreshTask(listTask){
+    const sortTask = [];
+    const doneTask = listTask.filter(elem => elem.done === true).sort((a, b) => b.dateCreate - a.dateCreate);
+    const notDoneTask = listTask.filter(elem => elem.done === false).sort((a, b) => b.dateCreate - a.dateCreate);
+    sortTask.push(...notDoneTask, ...doneTask);
+    return sortTask;
+}
 
   
   
