@@ -1,8 +1,8 @@
 const emailInputElem = document.querySelector('#email');
 const passwordInputElem = document.querySelector('#password');
 
-const emailErrorText = document.querySelector('.error-text-email');
-const passwordErrorText = document.querySelector('.error-text-password');
+const emailErrorText = document.querySelector('.error-text_email');
+const passwordErrorText = document.querySelector('.error-text_password');
 
 const isRequired = value => {
   return value ? undefined : 'Required';
