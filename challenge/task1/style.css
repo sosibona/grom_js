@@ -1,0 +1,45 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 32px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-table, .winner {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+.game-table__caption, .winner__caption {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.winner__caption {
+  color: gold;
+}
+
+.game-table__caption {
+  color: tomato;
+}
+
+thead {
+  background-color: lightgreen;
+}
+
+td, th {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.gold {
+  background-color: gold;
+}
