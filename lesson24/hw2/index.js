@@ -1,15 +1,15 @@
 const monthOfYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const students = [
-  {name: 'Tom', birthDay: '11/15/2010'},
-  {name: 'Ann', birthDay: '11/02/2002'},
-  {name: 'Bob', birthDay: '11/05/2000'},
+  {name: 'Tom', birthDay: '01/15/2010'},
+  {name: 'Ann', birthDay: '01/02/2002'},
+  {name: 'Bob', birthDay: '01/05/2000'},
   {name: 'Rob', birthDay: '01/10/2011'},
-  {name: 'Karl', birthDay: '08/23/1999'},
-  {name: 'Yan', birthDay: '08/30/1987'},
-  {name: 'Zak', birthDay: '08/03/1988'},
-  {name: 'Jerry', birthDay: '12/06/2012'},
-  {name: 'John', birthDay: '01/05/2013'},
+  {name: 'Karl', birthDay: '03/23/1999'},
+  {name: 'Yan', birthDay: '03/30/1987'},
+  {name: 'Zak', birthDay: '03/03/1988'},
+  {name: 'Jerry', birthDay: '03/06/2012'},
+  {name: 'John', birthDay: '01/06/2013'},
 ];
 
 export function studentsBirthDays(students){
