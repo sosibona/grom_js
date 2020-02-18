@@ -12,7 +12,7 @@ const students = [
   {name: 'John', birthDay: '01/05/2013'},
 ];
 
-export function studentBirthDays(students){
+export function studentsBirthDays(students){
 
   const month = {};
   for (let i = 0; i < students.length; i++) {
