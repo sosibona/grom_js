@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.arena {
+  display: flex;
+  justify-content: center;
+}
+
+.sector {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  margin: 16px;
+}
+
+.sector__seat {
+  width: 16px;
+  height: 16px;
+  background-color: aqua;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+}
+
+.sector__seat:hover {
+  transform: scale(1.5);
+  background-color: green;
+  border: 1px solid #fff;
+}
+
+.sector__line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20px;
+}
+
+.board {
+  width: 200px;
+  height: 100px;
+  background-color: goldenrod;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
