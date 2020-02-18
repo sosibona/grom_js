@@ -1,7 +1,7 @@
 export function getDiff(startDate, endDate){
 
-  const startTime = startDate.getTime();
-  const endTime = endDate.getTime();
+  let startTime = startDate.getTime();
+  let endTime = endDate.getTime();
   if (endTime - startTime < 0) {
     const newTime = startTime;
     startTime = endTime;
@@ -11,7 +11,7 @@ export function getDiff(startDate, endDate){
   const hour = 1000 * 60 * 60; // milisecond * second * minutes in 1 hour
   const minute = 1000 * 60; // milisecond * second *  in 1 minute
   const second = 1000; // milisecond  *  in 1 second
-  
+
   const days = Math.trunc((endTime - startTime) / day);
   let division = (endTime - startTime) % day;
 
