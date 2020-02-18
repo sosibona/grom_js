@@ -34,6 +34,8 @@ export function studentsBirthDays(students){
         .map(elem => elem.name);
   }
 
+  return month;
+
 }
 
 studentsBirthDays(students);
