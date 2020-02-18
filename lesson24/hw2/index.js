@@ -26,18 +26,14 @@ export function studentsBirthDays(students){
     }
   }
 
-  // console.log(month);
-
   for (let students in month) {
     month[students] = month[students]
         .map(objName => ({name: objName.name, birthDay: objName.birthDay = new Date(objName.birthDay).getDate()}))
         .sort((a, b) => a.birthDay - b.birthDay)
         .map(elem => elem.name);
   }
-  console.log(students);
-  
-  return month;
 
+  return month;
 }
 
-console.log(studentsBirthDays(students));
+studentsBirthDays(students);
