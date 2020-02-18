@@ -1,15 +1,15 @@
 const monthOfYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const students = [
-  {name: 'Tom', birthDay: '11/15/2010'},
-  {name: 'Ann', birthDay: '11/02/2002'},
-  {name: 'Bob', birthDay: '11/05/2000'},
-  {name: 'Rob', birthDay: '01/10/2011'},
-  {name: 'Karl', birthDay: '08/23/1999'},
-  {name: 'Yan', birthDay: '08/30/1987'},
-  {name: 'Zak', birthDay: '08/03/1988'},
-  {name: 'Jerry', birthDay: '12/06/2012'},
-  {name: 'John', birthDay: '01/05/2013'},
+  {name: 'Tom', birthDate: '11/15/2010'},
+  {name: 'Ann', birthDate: '11/02/2002'},
+  {name: 'Bob', birthDate: '11/05/2000'},
+  {name: 'Rob', birthDate: '01/10/2011'},
+  {name: 'Karl', birthDate: '08/23/1999'},
+  {name: 'Yan', birthDate: '08/30/1987'},
+  {name: 'Zak', birthDate: '08/03/1988'},
+  {name: 'Jerry', birthDate: '12/06/2012'},
+  {name: 'John', birthDate: '01/05/2013'},
 ];
 
 export function studentsBirthDays(students){
@@ -18,7 +18,7 @@ export function studentsBirthDays(students){
   for (let i = 0; i < students.length; i++) {
     const studentsCopy = Object.assign({}, students[i]);
    
-    let checkMonth = monthOfYear[new Date(studentsCopy.birthDay).getMonth()];
+    let checkMonth = monthOfYear[new Date(studentsCopy.birthDate).getMonth()];
     if (!month.hasOwnProperty(checkMonth)) {
       month[checkMonth] = [];
       month[checkMonth].push(studentsCopy)
@@ -29,10 +29,10 @@ export function studentsBirthDays(students){
 
   for (let students in month) {
     month[students] = month[students]
-        .sort((a, b) => new Date(a.birthDay) - new Date(b.birthDay))
+        .sort((a, b) => new Date(a.birthDate) - new Date(b.birthDate))
         .map(elem => elem.name);
   }
-
+  
   return month;
 }
 
