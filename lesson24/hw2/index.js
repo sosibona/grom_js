@@ -16,12 +16,13 @@ export function studentsBirthDays(students){
 
   const month = {};
   for (let i = 0; i < students.length; i++) {
-    let checkMonth = monthOfYear[new Date(students[i].birthDay).getUTCMonth()];
+    const studentsCopy = Object.assign({}, students[i]);
+    let checkMonth = monthOfYear[new Date(studentsCopy.birthDay).getUTCMonth()];
     if (!month.hasOwnProperty(checkMonth)) {
       month[checkMonth] = [];
-      month[checkMonth].push(students[i])
+      month[checkMonth].push(studentsCopy)
     } else {
-      month[checkMonth].push(students[i]);
+      month[checkMonth].push(studentsCopy);
     }
   }
 
@@ -33,9 +34,10 @@ export function studentsBirthDays(students){
         .sort((a, b) => a.birthDay - b.birthDay)
         .map(elem => elem.name);
   }
-
+  console.log(students);
+  
   return month;
 
 }
 
-studentsBirthDays(students);
+console.log(studentsBirthDays(students));
