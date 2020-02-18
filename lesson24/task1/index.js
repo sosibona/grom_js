@@ -1,6 +1,6 @@
 const weekDays = ['Su', 'Mo', 'Th', 'We', 'Tu', 'Fr', 'Sa']
 
-const getDayOfWeek = (date, days) => {
+export const DayOfWeek = (date, days) => {
   const day = new Date(date).getDate();
   console.log(day);
   
@@ -11,6 +11,6 @@ const getDayOfWeek = (date, days) => {
   // return dateInFuture;
 };
 
-const res = getDayOfWeek(new Date(), 1);
+const res = DayOfWeek(new Date(), 1);
 // console.log(new Date(res));
 console.log(res);
