@@ -36,4 +36,4 @@ export function studentsBirthDays(students){
 
 }
 
-studentBirthDays(students);
+studentsBirthDays(students);
