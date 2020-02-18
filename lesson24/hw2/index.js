@@ -15,14 +15,29 @@ const students = [
 export function studentsBirthDays(students){
 
   const month = {};
+  const s1 = [];
   for (let i = 0; i < students.length; i++) {
     const studentsCopy = Object.assign({}, students[i]);
-    let checkMonth = monthOfYear[new Date(studentsCopy.birthDay).getUTCMonth()];
+    s1.push(studentsCopy);
+  }
+  const s3 = s1
+      .map(elem => ({
+        name: elem.name,
+        birthDay: elem.birthDay,
+        month: new Date(elem.birthDay).getMonth(),
+      })).sort((a, b) => a.month - b.month).map(elem => ({
+        name: elem.name,
+        birthDay: elem.birthDay,
+      }));
+  
+  for (let i = 0; i < s3.length; i++) {
+  
+    let checkMonth = monthOfYear[new Date(s3[i].birthDay).getMonth()];
     if (!month.hasOwnProperty(checkMonth)) {
       month[checkMonth] = [];
-      month[checkMonth].push(studentsCopy)
+      month[checkMonth].push(s3[i])
     } else {
-      month[checkMonth].push(studentsCopy);
+      month[checkMonth].push(s3[i]);
     }
   }
 
