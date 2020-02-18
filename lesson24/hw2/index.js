@@ -44,7 +44,7 @@ export function studentsBirthDays(students){
   for (let students in month) {
     month[students] = month[students]
         .map(objName => ({name: objName.name, birthDay: objName.birthDay = new Date(objName.birthDay).getDate()}))
-        .sort((a, b) => b.birthDay - a.birthDay)  
+        .sort((a, b) => a.birthDay - b.birthDay)  
         .map(elem => elem.name);
   }
 
