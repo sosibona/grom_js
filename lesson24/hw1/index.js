@@ -20,7 +20,7 @@ export function getDiff(startDate, endDate){
 
   const seconds = Math.trunc(division / second);
   
-  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  // return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 }
 
