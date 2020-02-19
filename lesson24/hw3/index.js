@@ -29,7 +29,7 @@ function createNewTask(){
 
     const listTasks = refreshTask(listItems);
   
-    const alistTasks = listTasks.sort((a, b) => a.done - b.done)
+    const makeListTasks = listTasks.sort((a, b) => a.done - b.done)
       .map(({ text, done }) => {
       const listItemElem = document.createElement('li');
       const checkboxElem = document.createElement('input');
@@ -45,9 +45,9 @@ function createNewTask(){
       return listItemElem;
     });
 
-    listElem.append(...alistTasks);
+    listElem.append(...makeListTasks);
   
-    return alistTasks;
+    return makeListTasks;
   };
   
   renderListItems(task);
