@@ -64,9 +64,25 @@ body {
   margin-right: 8px;
 }
 
+.todo-close {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-close:hover{
+  background-color: royalblue;
+  transform: scale(1.5);
+}
+
 .todo-pen {
   margin-left: auto;
   cursor: pointer;
 }
+
+.todo-pen:hover{
+  color: teal;
+  transform: scale(1.5);
+}
+
 
 /*# sourceMappingURL=style.css.map */
