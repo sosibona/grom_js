@@ -6,7 +6,7 @@ console.log(localStorage);
 
 console.log(Object.entries(localStorage));
 
-const getLacalStorageData = () => {
+export const getLocalStorageData = () => {
   return Object.entries(localStorage)
     .reduce(function(acc, arr){
       acc[arr[0]] = arr[1];
@@ -14,7 +14,7 @@ const getLacalStorageData = () => {
     }, {})
   }
 
-const a = getLacalStorageData();
+const a = getLocalStorageData();
 console.log(a);
 
 
