@@ -9,7 +9,7 @@ console.log(Object.entries(localStorage));
 export const getLocalStorageData = () => {
   return Object.entries(localStorage)
     .reduce(function(acc, arr){
-      acc[arr[0]] = arr[1];
+      acc[arr[0]] = JSON.parse(arr[1]);
       return acc;
     }, {})
   }
