@@ -37,14 +37,26 @@ const onPasswordChange = event => {
 emailInputElem.addEventListener('input', onEmailChange)
 passwordInputElem.addEventListener('input', onPasswordChange)
 
-const formElem = document.querySelector('.form');
+const formElem = document.querySelector('.login-form');
 
 const onFormSubmit = event => {
   event.preventDefault();
   const formData = [...new FormData(formElem)]
-      .reduce((acc, [field, value]) => ({...acc, [field]: value}), {});
+      // .reduce((acc, [field, value]) => ({...acc, [field]: value}), {});
+      .reduce((acc, arr) => ({...acc, [arr[0]]: arr[1]}), {});
       
   alert(JSON.stringify(formData));
 }
 
 formElem.addEventListener('submit', onFormSubmit);
+
+
+// formData = [['email', 'mail@com'], ['password', 'abcde' ]];
+// const res = {};
+
+// for (let i = 0; i < formData.length; i++) {
+//   res[formData[i][0]] =  formData[i][1];
+// }
+
+// console.log(res);
+

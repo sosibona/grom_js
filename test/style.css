@@ -1,0 +1,16 @@
+body {
+  display:  flex;
+}
+
+.red-box {
+  width: 100px;
+  height: 100px; 
+  background-color: red;
+  margin-right: 20px;
+}
+
+.green-box {
+  width: 100px;
+  height: 100px; 
+  background-color: green;
+}

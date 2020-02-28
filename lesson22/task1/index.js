@@ -31,7 +31,7 @@ function removeHandleds(){
 
 function attatchHandleds(){
   elemDiv.addEventListener('click', logGreyDiv, true);
-  elemP.addEventListener('click', logGreyP, true);
+  elemP.addEventListener('click', logGreyP, false);
   elemSpan.addEventListener('click', logGreySpan, true);
   
   

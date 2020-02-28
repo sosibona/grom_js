@@ -43,3 +43,31 @@ td, th {
 .gold {
   background-color: gold;
 }
+
+label {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.game-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+input {
+  margin: 16px 0;
+  width: 50px;
+}
+
+.start-game {
+  border: none;
+  /* border-radius: 8px; */
+  background-color: dodgerblue;
+  color: white;
+  text-transform: uppercase;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
