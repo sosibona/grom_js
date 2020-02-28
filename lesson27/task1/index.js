@@ -1,6 +1,6 @@
 localStorage.setItem('user', JSON.stringify({name: 'Taras'}));
 localStorage.setItem('isAdmin', JSON.stringify(true));
-localStorage.setItem('Adress', JSON.stringify("Lviv"));
+localStorage.setItem('Adress', ("Lviv"));
 
 // console.log(localStorage);
 // 
@@ -22,9 +22,18 @@ localStorage.setItem('Adress', JSON.stringify("Lviv"));
 export const getLocalStorageData = () => {
   return Object.entries(localStorage)
     .reduce((acc, [key, value]) => {
+      let newValue;
+      try {
+        newValue = JSON.parse(value);
+      } catch(e) {
+        newValue = value;
+      }
       return {
         ...acc,
-        [key]: JSON.parse(value)
+        [key]: newValue
       }
     }, {});
 }
+
+console.log(getLocalStorageData());
+
