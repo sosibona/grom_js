@@ -6,25 +6,25 @@ localStorage.setItem('Adress', JSON.stringify("Lviv"));
 // 
 // console.log(Object.entries(localStorage));
 
-export const getLocalStorageData = () => {
-  return Object.entries(localStorage)
-    .reduce(function(acc, arr){
-      acc[arr[0]] = JSON.parse(arr[1]);
-      return acc;
-    }, {})
-  }
+// export const getLocalStorageData = () => {
+//   return Object.entries(localStorage)
+//     .reduce(function(acc, arr){
+//       acc[arr[0]] = JSON.parse(arr[1]);
+//       return acc;
+//     }, {})
+//   }
 
-getLocalStorageData();
+
 // console.log(a);
 
 
 
-// const getLacalStorageData = () => {
-//   return Object.entries(localStorage)
-//     .reduce((acc, [key, value]) => {
-//       return {
-//         ...acc,
-//         [key]: value,
-//       }
-//     }, {});
-// }
+export const getLocalStorageData = () => {
+  return Object.entries(localStorage)
+    .reduce((acc, [key, value]) => {
+      return {
+        ...acc,
+        [key]: JSON.parse(value)
+      }
+    }, {});
+}
