@@ -29,11 +29,11 @@ export const listElem = document.querySelector('.list');
       const listItemElem = document.createElement('li');
       const checkboxElem = document.createElement('input');
 
-      checkboxElem.classList.add('list__checkbox');
+      checkboxElem.classList.add('list__item-checkbox');
       listItemElem.classList.add('list__item'); 
       checkboxElem.setAttribute('type', 'checkbox');
 
-      if (done) listItemElem.classList.add('list__item_checked');
+      if (done) listItemElem.classList.add('list__item_done');
         checkboxElem.checked = done;
       listItemElem.append(checkboxElem, text);
       return listItemElem;

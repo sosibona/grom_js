@@ -1,7 +1,7 @@
 import {setItem, getItem} from './storage.js'
 import { renderListItems, listElem } from './index.js';
 
-const btnCreateTask = document.querySelector('.todo__button');
+const btnCreateTask = document.querySelector('.create-task-btn');
 let getTextFromInput = document.querySelector('.task-input')
 
 btnCreateTask.addEventListener('click', createNewTask);
