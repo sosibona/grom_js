@@ -10,7 +10,7 @@ body {
   align-items: center;
 }
 
-.todo__header {
+.title {
   font-weight: 24px;
   text-transform: uppercase;
 }
@@ -28,7 +28,7 @@ body {
   font-weight: bold;
 }
 
-.todo-task {
+.actions {
   display: flex;
 }
 
