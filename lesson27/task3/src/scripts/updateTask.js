@@ -1,4 +1,4 @@
-// import {task} from './storage.js';
+
 import {listElem, renderListItems} from './index.js';
 import { sortingTask } from './sortTask.js'
 import {setItem, getItem} from './storage.js'
