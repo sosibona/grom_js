@@ -8,12 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
   renderListItems();
 });
 
+const onStorageChange = e => {
+  if (e.key === 'tasksList') {
+    listElem.innerHTML = '';
+    renderListItems();
+  }
+}
+
+window.addEventListener('storage', onStorageChange)
+
 
 export const listElem = document.querySelector('.list');
 
   export const renderListItems = () => {
-    const taskList = getItem('taskList') || [];
-    const listTasks = sortingTask(taskList);
+    const tasksList = getItem('tasksList') || [];
+    const listTasks = sortingTask(tasksList);
 
     const makeListTasks = listTasks
       .map(({ text, done }) => {

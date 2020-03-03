@@ -10,16 +10,16 @@ export function createNewTask(){
     let inputValue = getTextFromInput.value;
     if (inputValue.length === 0) return;
 
-    const taskList = getItem('taskList') || [];
+    const tasksList = getItem('tasksList') || [];
 
-    taskList.push({
+    tasksList.push({
         text: inputValue,
         dateCreate: new Date(),
         done: false,
       });
       getTextFromInput.value = '';
 
-      setItem('taskList', taskList);
+      setItem('tasksList', tasksList);
 
       listElem.innerHTML = '';
       renderListItems();    

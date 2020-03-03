@@ -9,11 +9,11 @@ export function makeDoneTask(event) {
   const listTaskNow = event.target.closest('.list__item');
   listTaskNow.classList.toggle('list__item_checked')
 
-  const taskList = getItem('taskList');
+  const tasksList = getItem('tasksList');
 
-  isDoneTask(taskList, listTaskNow);
+  isDoneTask(tasksList, listTaskNow);
 
-  setItem('taskList', taskList);
+  setItem('tasksList', tasksList);
 
   listElem.innerHTML = '';
   renderListItems(sortingTask());
