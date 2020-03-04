@@ -8,7 +8,7 @@ const year = {
   milisecond: 1,
 }
 
-const shmoment = initValue => {
+export const shmoment = initValue => {
 
   let res = initValue;
 
