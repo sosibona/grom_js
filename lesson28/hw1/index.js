@@ -1,33 +1,62 @@
-const year = {
-  years: 31536000000,
-  month: 2419200000,
-  day: 86400000,
-  hour: 3600000,
-  minute: 60000,
-  second: 1000,
-  milisecond: 1,
-}
-
 export const shmoment = initValue => {
 
-  const res = new Date(initValue);
-  // console.log(res === initValue);
-  
+  const copyDate = new Date(initValue);
 
-  // let res = {...initValue};
 
   const calendar = {
 
     add(time, value) {
-      new Date(res.setMilliseconds(year[time] * value));
-      return this;
+      switch (time) {
+        case 'years':
+          new Date(copyDate.setFullYear(copyDate.getFullYear() + value));
+          return this;
+        case 'months':
+          new Date(copyDate.setMonth(copyDate.getMonth() + value));
+          return this;
+        case 'days':
+          new Date(copyDate.setDate(copyDate.getDate() + value));
+          return this;
+        case 'hours':
+          new Date(copyDate.setHours(copyDate.getHours() + value));
+          return this;
+        case 'minutes':
+          new Date(copyDate.setMinutes(copyDate.getMinutes() + value));
+          return this;
+        case 'seconds':
+          new Date(copyDate.setSeconds(copyDate.getSeconds() + value));
+          return this;
+        case 'milliseconds':
+          new Date(copyDate.setMilliseconds(copyDate.getMilliseconds() + value));
+          return this;
+      }
     },
     subtract(time, value) {
-      new Date(res.setMilliseconds(res.getMilliseconds() - (year[time] * value)));
-      return this;
+      switch (time) {
+        case 'years':
+          new Date(copyDate.setFullYear(copyDate.getFullYear() - value));
+          return this;
+        case 'months':
+          new Date(copyDate.setMonth(copyDate.getMonth() - value));
+          return this;
+        case 'days':
+          new Date(copyDate.setDate(copyDate.getDate() - value));
+          return this;
+        case 'hours':
+          new Date(copyDate.setHours(copyDate.getHours() - value));
+          return this;
+        case 'minutes':
+          new Date(copyDate.setMinutes(copyDate.getMinutes() - value));
+          return this;
+        case 'seconds':
+          new Date(copyDate.setSeconds(copyDate.getSeconds() - value));
+          return this;
+        case 'milliseconds':
+          new Date(copyDate.setMilliseconds(copyDate.getMilliseconds() - value));
+          return this;
+      }
     },
     result(){
-      return res;
+      return copyDate;
     }
   }
   return calendar;
