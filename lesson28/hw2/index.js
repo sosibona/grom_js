@@ -6,17 +6,17 @@ export const maxFibonacci = (value) => {
   while (true) {
     fibobacci[i] = fibobacci[i - 1] + fibobacci[i - 2];
 
-    fibobacci.push(fibobacci[i])
     
-    if (fibobacci[i] > value) {
+    if (fibobacci[i] >= value) {
       console.log(fibobacci);
       
       return fibobacci[i - 1];
     }
+    fibobacci.push(fibobacci[i])
     i++;
   }
 }
 
-// console.log(maxFibonacci(5));
+console.log(maxFibonacci(12));
 
 
