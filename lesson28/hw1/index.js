@@ -10,7 +10,11 @@ const year = {
 
 export const shmoment = initValue => {
 
-  let res = initValue;
+  const res = new Date(initValue);
+  // console.log(res === initValue);
+  
+
+  // let res = {...initValue};
 
   const calendar = {
 
