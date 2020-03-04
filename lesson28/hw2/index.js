@@ -8,7 +8,7 @@ export const maxFibonacci = (value) => {
 
     fibobacci.push(fibobacci[i])
     
-    if (fibobacci[i] >= value) {
+    if (fibobacci[i] > value) {
       console.log(fibobacci);
       
       return fibobacci[i - 1];
@@ -17,6 +17,6 @@ export const maxFibonacci = (value) => {
   }
 }
 
-console.log(maxFibonacci(5));
+// console.log(maxFibonacci(5));
 
 
