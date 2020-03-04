@@ -13,6 +13,6 @@ export const maxFibonacci = (value) => {
   }
 }
 
-console.log(maxFibonacci(15));
+// console.log(maxFibonacci(15));
 
 
