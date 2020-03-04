@@ -1,6 +1,6 @@
 export const maxFibonacci = (value) => {
 
-  // if (value === 1) return 0;
+   if (value <= 1) return 0;
 
   const fibobacci = [0, 1]
   let i = 2;
@@ -19,6 +19,6 @@ export const maxFibonacci = (value) => {
   }
 }
 
-console.log(maxFibonacci(15));
+console.log(maxFibonacci(0.1));
 
 
