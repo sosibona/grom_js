@@ -1,5 +1,5 @@
-export function delay(delay, callback, context, arguments) {
+export function delay(delay, callback, context, ...arguments) {
 
-      setTimeout(() => callback.call(context, arguments), delay);
+      setTimeout(() => callback.call(context, ...arguments), delay);
 
 }
