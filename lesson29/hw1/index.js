@@ -4,7 +4,7 @@ setTimeout(() => {
   if (userId === 'broken') {
     callback(null, 'Failed to load user data')
   }
-  callback({name: 'John', age: 17, userId: userId, email:'userid777@example.com'});
+  callback({name: 'John', age: 17, userId: userId, email:`${userId}@example.com`});
 }, 2000);
 }
 
