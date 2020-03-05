@@ -11,7 +11,6 @@ export const addImageV2 = urlImg => {
       resolve(data);
     }
     addImage(urlImg, callbackFromAddImage);
-
-    return prom;
   });
+  return prom;
 }
