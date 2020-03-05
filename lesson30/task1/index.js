@@ -1,4 +1,4 @@
-const addImageWithPromise = imgSrc => {
+export const addImageWithPromise = imgSrc => {
   const p = new Promise((resolveCb, rejectCb) => {
 
     const imgElem = document.createElement('img');
