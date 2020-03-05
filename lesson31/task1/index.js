@@ -1,4 +1,4 @@
-const requestUserData = (userId) => {
+export const requestUserData = (userId) => {
   const p = new Promise((resolve, reject) => {
     if (userId === 'broken') {
       setTimeout(() => {
