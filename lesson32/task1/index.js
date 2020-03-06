@@ -1,5 +1,5 @@
 const getSum = numbers => {
-  return numbers
+  numbers
     .filter(numbers => !isNaN(numbers))
     .reduce((acc, number) => acc + Number(number), 0);
 }
