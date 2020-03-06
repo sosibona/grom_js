@@ -11,5 +11,4 @@ export const asyncSum = (...asyncNumbers) => {
 }
 
 asyncSum(asyncNumbers1, asyncNumbers2, asyncNumbers3)
-  
   .then(result => console.log(result));
