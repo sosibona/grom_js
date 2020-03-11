@@ -1,6 +1,7 @@
 // let commit = 2;
 const MilisecInOneDay = 86400000;
-export const getMostActiveDevs = (days, userId, repoId) => {
+export const getMostActiveDevs = (objRepo) => {
+  const { days, userId, repoId } = objRepo;
   return fetch(`https://api.github.com/repos/${userId}/${repoId}/commits?per_page=100`)
     .then(response => response.json())
     .then(result => {
@@ -47,5 +48,5 @@ const getMaxCommit = countSortCommits => {
 }
 
 
-getMostActiveDevs(10, 'sosibona', 'calendar').then(res => console.log(res));
+getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'}).then(res => console.log(res));
 
