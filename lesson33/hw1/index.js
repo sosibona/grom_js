@@ -40,11 +40,9 @@ const sortCommit = countCommits => {
 }
 
 const getMaxCommit = countSortCommits => {
-  console.log(countSortCommits);
   const maxCommits = countSortCommits.filter(commit => commit.count === countSortCommits[0].count);
   return maxCommits;
 }
 
 
-// console.log(getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'}));
-
+getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'});
