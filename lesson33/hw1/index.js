@@ -5,6 +5,7 @@ export const getMostActiveDevs = (objRepo) => {
     .then(response => response.json())
     .then(result => {
       const commit = result.filter(elem => new Date(elem['commit']['author']['date']).getTime() >  countDate(days));
+      console.log(commit);
       const countCommitByUser = countCommit(commit);
       const sortedList = sortCommit(countCommitByUser);
       const max = getMaxCommit(sortedList);
@@ -29,8 +30,11 @@ const countCommit = commitsList => {
       counts = {count: 1, name: currentCommit['name'], email: currentCommit['email']};
       rank.push(counts);
     } else {
-      counts.count++;
+      for (let user of rank) {
+        if (currentCommit['name'] === user.name) user.count++;
+      }
     }
+    console.log(counts)
   }
   return rank;
 }
@@ -40,9 +44,10 @@ const sortCommit = countCommits => {
 }
 
 const getMaxCommit = countSortCommits => {
+  console.log(countSortCommits)
   const maxCommits = countSortCommits.filter(commit => commit.count === countSortCommits[0].count);
   return maxCommits;
 }
 
 
-// getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'});
+// console.log(getMostActiveDevs({days: 25, userId: 'javascript-tutorial', repoId: 'en.javascript.info'}));
