@@ -15,7 +15,6 @@ export const getMostActiveDevs = (objRepo) => {
 const countDate = days => {
   const nowTime = new Date().getTime();
   const pastTime = MilisecInOneDay * days;
-  console.log(nowTime - pastTime);
   return nowTime - pastTime;
 }
 
