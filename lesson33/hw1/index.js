@@ -1,4 +1,3 @@
-// let commit = 2;
 const MilisecInOneDay = 86400000;
 export const getMostActiveDevs = (objRepo) => {
   const { days, userId, repoId } = objRepo;
@@ -48,5 +47,5 @@ const getMaxCommit = countSortCommits => {
 }
 
 
-getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'}).then(res => console.log(res));
+console.log(getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'}));
 
