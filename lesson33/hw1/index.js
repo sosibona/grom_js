@@ -45,4 +45,4 @@ const getMaxCommit = countSortCommits => {
 }
 
 
-getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'});
+// getMostActiveDevs({days: 10, userId: 'sosibona', repoId: 'calendar'});
