@@ -55,7 +55,7 @@ body {
   font-weight: bold;
 }
 
-.list__item_checked {
+.list__item_done {
   opacity: 0.7;
   text-decoration: line-through;
 }

@@ -7,7 +7,7 @@ const checkboxAllElem = document.querySelector('.list');
 
 export function makeDoneTask(event) {
   const listTaskNow = event.target.closest('.list__item');
-  listTaskNow.classList.toggle('done')
+  listTaskNow.classList.toggle('list__item_done')
 
   const tasksList = getItem('tasksList');
 
