@@ -12,5 +12,5 @@ export const fetchUser = async userId => {
 }
 
 fetchUser('sosibona')
-  then(userData => console.log(userData))
+  .then(userData => console.log(userData))
   .catch(err => alert(err.message));
