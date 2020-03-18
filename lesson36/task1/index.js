@@ -11,6 +11,6 @@ export const fetchUser = async userId => {
   }
 }
 
-getUser('sosibona')
+fetchUser('sosibona')
   then(userData => console.log(userData))
   .catch(err => alert(err.message));
