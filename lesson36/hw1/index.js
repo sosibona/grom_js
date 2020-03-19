@@ -9,7 +9,7 @@ const getUserData = (user) => {
         throw new Error('Error');
       })
       .then(value => value.blog)
-      .catch(err => alert(err.message));
+      .catch(err => err);
 
   return response;
 }
@@ -17,9 +17,7 @@ const getUserData = (user) => {
 export const getUsersBlogs = async userList => {
   try {
       const promiseList = userList.map(user => getUserData(user));
-
       const response = await Promise.all(promiseList)
-      console.log(response)
       return response;
   }
   catch (err) {
