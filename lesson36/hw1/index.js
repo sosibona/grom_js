@@ -41,7 +41,7 @@ const getUserData = (userId) => {
   return response
 }
 
-const getUsersBlogs = async (userIdArr) => {
+export const getUsersBlogs = async (userIdArr) => {
   try {
       const arrOfPromises = userIdArr.map(item => getUserData(item));
 
