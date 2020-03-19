@@ -9,7 +9,7 @@ const getUserData = (user) => {
   return response;
 }
 
-const getUsersBlogs = async userList => {
+export const getUsersBlogs = async userList => {
   try {
       const promiseList = userList.map(user => getUserData(user));
 
