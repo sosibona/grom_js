@@ -2,7 +2,12 @@ const getUserData = (user) => {
 
   const url = `https://api.github.com/users/${user}`
   const response = fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Error');
+      })
       .then(value => value.blog)
       .catch(err => alert(err.message));
 
